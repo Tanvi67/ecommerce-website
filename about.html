@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - Fashion Retail</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="header">
+        <div class="container">
+             <div class="navbar">
+            <div class="logo">
+                <a href="index.html.html"><img src="images/logo.png" width="125px"></a>
+            </div>
+            <nav>
+              <ul id="MenuItems">
+                 <li><a href="index.html.html">HOME</a></li>
+                 <li><a href="product.html">PRODUCTS</a></li>
+                 <li><a href="about.html">ABOUT</a></li>
+                 <li><a href="contact.html">CONTACT</a></li>
+                 <li><a href="Account.html">ACCOUNT</a></li>
+                </ul>
+            </nav>
+                 <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+                  <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        </div>
+        </div>
+        
+        <!---------- About Us Section ------------->
+        <div class="small-container">
+            <h2 class="title">About Fashion Retail</h2>
+            
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/image1.png" alt="About Us">
+                </div>
+                <div class="col-2">
+                    <h1>Our Story</h1>
+                    <p>Fashion Retail was founded with a simple mission: to make premium fashion accessible to everyone. We believe that style shouldn't be compromised, and quality should be affordable.</p>
+                    <br>
+                    <p>Since our inception, we've been dedicated to bringing you the latest trends in fashion, from comfortable athleisure to elegant accessories. Our team carefully curates each product to ensure you get the best value for your money.</p>
+                    <br>
+                    <p>We're not just a store; we're a community of fashion enthusiasts who believe in the power of self-expression through style.</p>
+                </div>
+            </div>
+            
+            <h2 class="title" style="margin-top: 80px;">Our Values</h2>
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-heart" style="font-size: 50px; color: #ff523b; margin-bottom: 20px;"></i>
+                    <h3>Quality First</h3>
+                    <p>We source only the finest materials and work with trusted manufacturers to ensure every product meets our high standards.</p>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-users" style="font-size: 50px; color: #ff523b; margin-bottom: 20px;"></i>
+                    <h3>Customer Focused</h3>
+                    <p>Your satisfaction is our priority. We're committed to providing exceptional service and support at every step of your journey.</p>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-leaf" style="font-size: 50px; color: #ff523b; margin-bottom: 20px;"></i>
+                    <h3>Sustainability</h3>
+                    <p>We're committed to sustainable practices, from eco-friendly packaging to partnering with ethical manufacturers.</p>
+                </div>
+            </div>
+            
+            <h2 class="title" style="margin-top: 80px;">Why Choose Us?</h2>
+            <div class="row" style="margin-bottom: 80px;">
+                <div class="col-2">
+                    <h3 style="color: #ff523b; margin-bottom: 15px;">✓ Premium Quality Products</h3>
+                    <p>Every item in our collection is handpicked for quality and style.</p>
+                    <br>
+                    <h3 style="color: #ff523b; margin-bottom: 15px;">✓ Affordable Prices</h3>
+                    <p>We believe great fashion shouldn't break the bank.</p>
+                    <br>
+                    <h3 style="color: #ff523b; margin-bottom: 15px;">✓ Fast Shipping</h3>
+                    <p>Get your orders delivered quickly and safely to your doorstep.</p>
+                </div>
+                <div class="col-2">
+                    <h3 style="color: #ff523b; margin-bottom: 15px;">✓ Easy Returns</h3>
+                    <p>Not satisfied? We offer hassle-free returns within 30 days.</p>
+                    <br>
+                    <h3 style="color: #ff523b; margin-bottom: 15px;">✓ Secure Shopping</h3>
+                    <p>Your data is protected with industry-standard encryption.</p>
+                    <br>
+                    <h3 style="color: #ff523b; margin-bottom: 15px;">✓ 24/7 Support</h3>
+                    <p>Our customer service team is always here to help you.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!--------- footer ------->
+        <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App.</h3>
+                    <p>Download App for Andriod and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                     <img src="images/logo-white.png">
+                    <p>Our Purpose Is TO Subtainable Make the Pleasure and Benifits of Sports Accessible to the many.</p>
+            </div>
+                 <div class="footer-col-3">
+                    <h3>Useful Links.</h3>
+                  <ul>
+                     <li>Coupons</li>
+                     <li>Blog Post</li>
+                     <li>Return Policy</li>
+                     <li>Join Affiliate</li>
+                     </ul>
+        </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                  <ul>
+                     <li>Facebook</li>
+                     <li>Twitter</li>
+                     <li>Intagram</li>
+                     <li>YouTube</li>
+                     </ul>
+        </div>
+        </div>
+            <hr>
+            <p class="copyright">copyright 2033 - Satyam</p>
+        </div>
+        </div>
+        
+        <!--- js for toogle menu ------>
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            MenuItems.style.maxHeight = "0px";
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px")
+                {
+                    MenuItems.style.maxHeight = "200px";
+                }
+                else
+                {
+                   MenuItems.style.maxHeight = "0px"; 
+                }
+                
+            }
+        
+        </script>
+     </body>
+</html>
