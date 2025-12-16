@@ -31,15 +31,15 @@
        <div class="small-container">
            <div class="row row-2">
            <h2>All Products</h2>
-               <select>
-                   <option>Default Shorting</option>
-                   <option>Short by Price</option>
-                   <option>Short by Popularity</option>
-                   <option>Short by Rating</option>
-                   <option>Short by Sale</option>
+               <select id="sortSelect">
+                   <option value="default">Default Sorting</option>
+                   <option value="price-asc">Sort by Price: Low to High</option>
+                   <option value="price-desc">Sort by Price: High to Low</option>
+                   <option value="name-asc">Sort by Name: A - Z</option>
+                   <option value="name-desc">Sort by Name: Z - A</option>
                </select>
            </div>
-           <div class="row">
+           <div class="row" id="products">
                <div class="col-4">
                    <a href="productDetails.html"><img src="images/product-1.jpg"></a>
                    <h4>Red Printed T-shirt</h4>
@@ -136,8 +136,6 @@
                    </div>
                    <p>₹3000</p>
                </div>
-           </div>
-               <div class="row">
                <div class="col-4">
                    <img src="images/product-9.jpg">
                    <h4>Black Leather Watch</h4>
@@ -252,6 +250,41 @@
                
            }
        
+       </script>
+
+       <!--- js for product sorting ------>
+       <script>
+       (function(){
+           // preserve original order
+           var container = document.getElementById('products');
+           if(!container) return;
+           Array.from(container.querySelectorAll('.col-4')).forEach(function(el,i){ el.dataset.index = i; });
+
+           function parsePrice(el){
+               var p = el.querySelector('p');
+               if(!p) return 0;
+               return Number(p.textContent.replace(/[^0-9.-]+/g,'') || 0);
+           }
+           function parseName(el){
+               var h = el.querySelector('h4');
+               return h ? h.textContent.trim().toLowerCase() : '';
+           }
+
+           var select = document.getElementById('sortSelect');
+           if(!select) return;
+           select.addEventListener('change', function(){
+               var val = this.value;
+               var items = Array.from(container.querySelectorAll('.col-4'));
+               var sorted = items.slice();
+               if(val === 'price-asc') sorted.sort(function(a,b){return parsePrice(a)-parsePrice(b);});
+               else if(val === 'price-desc') sorted.sort(function(a,b){return parsePrice(b)-parsePrice(a);});
+               else if(val === 'name-asc') sorted.sort(function(a,b){return parseName(a).localeCompare(parseName(b));});
+               else if(val === 'name-desc') sorted.sort(function(a,b){return parseName(b).localeCompare(parseName(a));});
+               else sorted.sort(function(a,b){return (a.dataset.index||0) - (b.dataset.index||0);});
+
+               sorted.forEach(function(it){ container.appendChild(it); });
+           });
+       })();
        </script>
     </body>
 </html>
