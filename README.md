@@ -69,6 +69,19 @@ The following screenshots demonstrate the Git operations performed during the pr
 ### Push to GitHub Repository
 ![Git Push](screenshot/git-push.png)
 
+### README Documentation Commit
+![README Documentation Added](screenshot/readme-documentation-added.png)
+
+### Push README to GitHub
+![Push README](screenshot/push-readme.png)
+
+### Git Pull Operation
+![Git Pull](screenshot/git-pull.png)
+
+### Git Clone Operation
+![Git Clone](screenshot/git-clone.png)
+
+
 
 
 
